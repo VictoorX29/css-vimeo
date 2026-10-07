@@ -183,3 +183,7 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
+.sect-impulso-video {
+	padding-block: 32px;
+	background-color: rgba(20, 26, 32);
+}
