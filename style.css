@@ -165,7 +165,10 @@ header {
 	flex: 0 0 auto;
 	gap: 80px;
 }
-.tit-sect-forma-trabajo {
+.sectFormaTrabajo {
+	padding-block: 32px;
+}
+.titSectFormaTrabajo {
 	color: rgba(10, 14, 18);
 	font-size: 32px;
 	line-height: 1;
@@ -174,7 +177,7 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
-.text-sect-forma-trabajo {
+.textSectFormaTrabajo {
 	color: rgba(76, 88, 100);
 	font-size: 18px;
 	line-height: 1.35;
@@ -183,7 +186,21 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
-.sect-impulso-video {
+.sectImpulsoVideo {
 	padding-block: 32px;
 	background-color: rgba(20, 26, 32);
+	color: rgba(250, 252, 253);
+}
+.titSectImpulsoVideo {
+	font-size: 22px;
+	line-height: 1.1;
+	letter-spacing: -0.05375rem;
+	font-weight: 500;
+}
+.txtCardImpulsoVideo {
+	color: rgba(169, 178, 188);
+	font-size: 16px;
+	line-height: 1.3;
+	letter-spacing: -0.03rem;
+	font-weight: 400;
 }
