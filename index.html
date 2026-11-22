@@ -1,48 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>M0615 - Vimeo</title>
 		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="https://f.vimeocdn.com/cms/images/favicon.ico"
+			type="image/x-icon" />
 	</head>
 	<body>
 		<header>
-			<div class="divLogoH">
+			<a href="" class="headerLogo">
 				<img src="images/logo.svg" alt="Vimeo" />
-			</div>
-			<div class="divButtonsH">
-				<div>
-					<img src="images/chat.svg" alt="Comunicación" />
+			</a>
+			<div class="headerAcciones">
+				<a href="" class="headerAccion">
+					<img src="images/chat.svg" alt="" />
 					<span>Comunicarse con ventas</span>
-				</div>
-				<div>
-					<img src="images/user.svg" alt="Usuario" />
+				</a>
+				<a href="" class="headerAccion">
+					<img src="images/user.svg" alt="" />
 					<span>Iniciar sesión</span>
-				</div>
+				</a>
 			</div>
 		</header>
 		<main>
 			<section class="hero">
-				<div class="flex-col divImg justCenter">
+				<div class="heroMedia">
 					<img src="images/imgHero.avif" alt="" />
-					<div class="divTopImg flex-col justCenter">
-						<div class="divTextsTop flex-col justCenter">
-							<p>Su plataforma de video completa</p>
-							<p>Sus videos, a su manera</p>
-							<p>
+					<div class="heroContenido">
+						<div class="heroTextos">
+							<p class="heroAnteTitulo">Su plataforma de video completa</p>
+							<h1 class="heroTitulo">Sus videos, a su manera</h1>
+							<p class="heroTexto">
 								La plataforma sin anuncios de Vimeo le ofrece todo lo que
 								necesita para alojar, gestionar y compartir videos de alta
 								calidad.
 							</p>
 						</div>
-						<div class="flex-col divTopBtns justCenter">
-							<a href="" class="btnPlanesTopImg">
-								<p>Ver los planes</p>
+						<div class="heroBotones">
+							<a href="" class="btn btnPrimario btnAncho">
+								<span>Ver los planes</span>
 								<img src="images/arrowBtn.svg" alt="" />
 							</a>
-							<a href="" class="btnProbarTopImg">
-								<p>Probar gratis</p>
+							<a href="" class="btn btnTexto">
+								<span>Probar gratis</span>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="24"
@@ -59,40 +63,41 @@
 								</svg>
 							</a>
 						</div>
+						<div class="heroReplay">
+							<a href="" class="btn btnReplay">
+								<p>Reproducir</p>
+								<img src="images/replayBtn.svg" alt="" />
+							</a>
+						</div>
 					</div>
-					<a href="" class="btnReplayTopImg">
-						<p>Reproducir</p>
-						<img src="images/replayBtn.svg" alt="" />
-					</a>
 				</div>
 			</section>
-			<section class="sectConfianza flex-col">
-				<div class="txtSectConf">
-					<p>
-						Con la confianza de más de 287 millones de creativos, profesionales
-						del marketing y empresas
-					</p>
-				</div>
-				<div class="divLogosConf">
+			<section class="confianza">
+				<h2 class="confianzaTitulo">
+					Con la confianza de más de 287 millones de creativos, profesionales
+					del marketing y empresas
+				</h2>
+				<div class="confianzaLogos">
 					<img
 						src="https://vimeo.bynder.com/transform/4b9413c0-eda2-4efb-8efb-604db37ce4a9/Seismic-logo?io=transform:fit,width:250&height:100&quality=100"
-						alt="" />
+						alt="Seismic" />
 
 					<img
 						src="https://vimeo.bynder.com/transform/91592183-6ce5-4ae5-88b2-8fa571577f5c/icon-brands-even-odd?io=transform:fit,width:250&height:100&quality=100"
-						alt="" />
+						alt="Even Odd" />
 				</div>
 			</section>
-
-			<section class="sectFormaTrabajo">
-				<div>
-					<p class="titSectFormaTrabajo">Diseñado para su forma de trabajar</p>
-					<p class="textSectFormaTrabajo">
+			<section class="formaTrabajo">
+				<div class="formaTrabajoTextos">
+					<h2 class="formaTrabajoTitulo">Diseñado para su forma de trabajar</h2>
+					<p class="formaTrabajoTexto">
 						Desde SSO y controles de privacidad hasta transmisión en vivo,
 						funciones avanzadas de IA y mucho más: Vimeo Enterprise se puede
 						personalizar para satisfacer las necesidades de su empresa.
 					</p>
-					<a href="" class="btnPlanesTopImg">
+				</div>
+				<div class="formaTrabajoBotones">
+					<a href="" class="btn btnPrimario btnAncho">
 						<p>Solicitar una demostración</p>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -111,39 +116,42 @@
 					</a>
 				</div>
 			</section>
-
-			<section class="sectImpulsoVideo">
-				<p class="titSectImpulsoVideo">
+			<!-- <section class="sectImpulsoVideo">
+				<span class="titSectImpulsoVideo">
 					La plataforma que impulsa su estrategia de video
-				</p>
-				<div>
-					<div>
-						<div>
-							<img src="images/imgVids/online-video-hosting.avif" alt="" />
-						</div>
-						<a href="" class="btnProbarTopImg">
-							<span>Alojamiento en alta calidad y sin anuncios</span>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								fill="none"
-								aria-hidden="true"
-								color="inherit"
-								viewBox="0 0 24 24"
-								aria-labelledby=""
-								style="color: currentColor">
-								<path
-									fill="currentColor"
-									d="m15.335 13.332-3.661 3.74a.983.983 0 1 0 1.405 1.376l5.136-5.246c.38-.388.38-1.018 0-1.406L13.079 6.55a.983.983 0 1 0-1.405 1.376l3.66 3.74h-8.5a.833.833 0 0 0 0 1.666z"></path>
-							</svg>
+				</span>
+				<ul class="listaCards">
+					<li class="card">
+						<a href="">
+							<div>
+								<img src="images/imgVids/online-video-hosting.avif" alt="" />
+							</div>
+							<div>
+								<p class="btnProbarTopImg">
+									<span>Alojamiento en alta calidad y sin anuncios</span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										fill="none"
+										aria-hidden="true"
+										color="inherit"
+										viewBox="0 0 24 24"
+										aria-labelledby=""
+										style="color: currentColor">
+										<path
+											fill="currentColor"
+											d="m15.335 13.332-3.661 3.74a.983.983 0 1 0 1.405 1.376l5.136-5.246c.38-.388.38-1.018 0-1.406L13.079 6.55a.983.983 0 1 0-1.405 1.376l3.66 3.74h-8.5a.833.833 0 0 0 0 1.666z"></path>
+									</svg>
+								</p>
+								<p class="txtCardImpulsoVideo">
+									Asegúrese de que sus videos se reproduzcan con la máxima
+									resolución y siempre sin anuncios. Sin distracciones de la
+									competencia ni sugerencias aleatorias.
+								</p>
+							</div>
 						</a>
-						<p class="txtCardImpulsoVideo">
-							Asegúrese de que sus videos se reproduzcan con la máxima
-							resolución y siempre sin anuncios. Sin distracciones de la
-							competencia ni sugerencias aleatorias.
-						</p>
-					</div>
+					</li>
 					<div>
 						<div><img src="images/imgVids/collaborate.avif" alt="" /></div>
 						<a href="" class="btnProbarTopImg">
@@ -275,9 +283,8 @@
 							fáciles de usar de Vimeo.
 						</p>
 					</div>
-				</div>
+				</ul>
 			</section>
-			<!--
 			<section>
 				<div>
 					<div>
@@ -495,7 +502,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 		</main>
 		<footer>
 			<div>
@@ -597,7 +604,6 @@
 				<p></p>
 			</div>
 		</div>
-	-->
 		</main>
 	</body>
 </html>

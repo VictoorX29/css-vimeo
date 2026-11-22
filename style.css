@@ -1,7 +1,24 @@
+:root {
+	/* Colores */
+	--color-primario: #17d5ff;
+	--color-oscuro: #141a20;
+	--color-negro: #0a0e12;
+	--color-claro: #fafcfd;
+	--color-gris: #4c5864;
+	--color-blanco-translucido: #ffffff99;
+}
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		'Segoe UI',
+		Roboto,
+		sans-serif;
 }
 header {
 	display: flex;
@@ -9,18 +26,22 @@ header {
 	align-items: center;
 	padding: 16px;
 }
-
-.divLogoH img {
-	width: 80px;
-	height: 52px;
+.headerLogo {
+	display: inline-flex;
 }
-.divButtonsH {
+.headerLogo img {
+	height: 52px;
+	width: 80px;
+}
+.headerAcciones {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 16px;
 }
-.divButtonsH div {
+.headerAccion {
+	text-decoration-line: none;
+	color: inherit;
 	font-size: 10px;
 	text-align: center;
 	justify-content: center;
@@ -29,7 +50,7 @@ header {
 	flex-direction: column;
 	gap: 4px;
 }
-.divButtonsH img {
+.headerAccion img {
 	height: 24px;
 	aspect-ratio: 1/1;
 	display: flex;
@@ -40,118 +61,109 @@ header {
 	padding-inline: 16px;
 	padding-bottom: 32px;
 }
-.flex-col {
+.heroMedia {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-}
-.flex {
-	display: flex;
-}
-.relative {
-	position: relative;
-}
-.justCenter {
 	justify-content: center;
 	align-items: center;
 }
-.divImg {
-	position: relative;
-}
-.divImg > img {
+.heroMedia > img {
 	min-height: 552px;
 	width: 100%;
 	border-radius: 16px;
 	object-fit: cover;
 }
-.divTopImg {
+.heroContenido {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 24px;
 	padding: 24px;
 	height: 100%;
 	width: 100%;
 }
-.divTextsTop {
+.heroTextos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 16px;
-	color: rgba(250, 252, 253);
+	color: var(--color-claro);
 	text-align: center;
 }
-.divTextsTop p:nth-child(1) {
+.heroAnteTitulo {
 	text-transform: uppercase;
 	font-size: 14px;
 	line-height: 100%;
 	letter-spacing: -0.48px;
 	font-weight: 400;
 }
-.divTextsTop p:nth-child(2) {
+.heroTitulo {
 	font-size: 40px;
 	line-height: 100%;
 	letter-spacing: -2px;
 	font-weight: 500;
 	text-wrap: balance;
 }
-.divTextsTop p:nth-child(3) {
+.heroTexto {
 	font-size: 16px;
 	line-height: 135%;
 	letter-spacing: -0.54px;
 	font-weight: 400;
 	max-width: 320px;
 }
-.divTopBtns {
+.heroBotones {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 16px;
 }
-.btnPlanesTopImg {
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration-line: none;
+	font-size: 16px;
+	line-height: 110%;
+	letter-spacing: -0.48px;
+	font-weight: 500;
+}
+.btnPrimario {
+	padding: 12px 16px;
+	border-radius: 12px;
+	background-color: var(--color-primario);
+	color: var(--color-oscuro);
+}
+.btnAncho {
 	width: 300px;
-	display: inline-flex;
 	justify-content: space-between;
-	padding-block: 12px;
-	padding-inline: 16px;
-	background-color: rgba(23, 213, 255);
-	align-items: center;
-	border-radius: 12px;
-	text-decoration-line: none;
-	font-size: 16px;
-	line-height: 110%;
-	letter-spacing: -0.48px;
-	font-weight: 500;
-	color: rgba(20, 26, 32);
 }
-.btnProbarTopImg {
-	display: inline-flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 8px;
-	text-decoration-line: none;
-	color: rgba(250, 252, 253);
-	font-size: 16px;
-	line-height: 110%;
-	letter-spacing: -0.48px;
-	font-weight: 500;
+.btnTexto {
+	color: var(--color-claro);
 }
-.btnReplayTopImg {
+.heroReplay {
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin-right: 24px;
-	margin-bottom: 24px;
-	text-decoration-line: none;
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	padding-inline: 24px;
-	padding-block: 12px;
-	background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 12px;
-	font-size: 16px;
-	line-height: 110%;
-	letter-spacing: -0.48px;
-	font-weight: 500;
-	color: rgba(20, 26, 32);
+	right: 24px;
+	bottom: 24px;
 }
-.sectConfianza {
+.btnReplay {
+	padding: 12px 24px;
+	border-radius: 12px;
+	background-color: var(--color-blanco-translucido);
+	color: var(--color-oscuro);
+}
+.confianza {
+	display: flex;
+	flex-direction: column;
 	padding-block: 32px;
 	gap: 32px;
 }
-.txtSectConf {
+.confianzaTitulo {
+	padding-inline: 16px;
 	font-size: 20px;
 	line-height: 1.4;
 	letter-spacing: -0.0375rem;
@@ -159,17 +171,31 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
-.divLogosConf {
+.confianzaLogos {
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	flex: 0 0 auto;
 	gap: 80px;
 }
-.sectFormaTrabajo {
-	padding-block: 32px;
+.formaTrabajo {
+	display: flex;
+	flex-direction: column;
+	padding: 32px 16px;
+	gap: 8px;
 }
-.titSectFormaTrabajo {
-	color: rgba(10, 14, 18);
+.formaTrabajoTextos {
+	display: flex;
+	flex-direction: column;
+	padding-block: 24px;
+	gap: 16px;
+}
+.formaTrabajoBotones {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.formaTrabajoTitulo {
+	color: var(--color-negro);
 	font-size: 32px;
 	line-height: 1;
 	letter-spacing: -0.08rem;
@@ -177,8 +203,8 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
-.textSectFormaTrabajo {
-	color: rgba(76, 88, 100);
+.formaTrabajoTexto {
+	color: var(--color-gris);
 	font-size: 18px;
 	line-height: 1.35;
 	letter-spacing: -0.03375rem;
@@ -187,20 +213,13 @@ header {
 	text-wrap: balance;
 }
 .sectImpulsoVideo {
-	padding-block: 32px;
-	background-color: rgba(20, 26, 32);
-	color: rgba(250, 252, 253);
+	padding: 32px 17px;
+	background-color: var(--color-oscuro);
+	color: var(--color-claro);
 }
-.titSectImpulsoVideo {
-	font-size: 22px;
-	line-height: 1.1;
-	letter-spacing: -0.05375rem;
-	font-weight: 500;
-}
-.txtCardImpulsoVideo {
-	color: rgba(169, 178, 188);
-	font-size: 16px;
-	line-height: 1.3;
-	letter-spacing: -0.03rem;
-	font-weight: 400;
+.ulSectImpVideo {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+	width: 100%;
 }
