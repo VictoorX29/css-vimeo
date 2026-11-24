@@ -1,6 +1,4 @@
-/* ==================== VARIABLES ==================== */
 :root {
-	/* Colores */
 	--color-primario: #17d5ff;
 	--color-oscuro: #141a20;
 	--color-negro: #0a0e12;
@@ -11,7 +9,6 @@
 	--color-pistacho: #d6e96d;
 }
 
-/* ==================== BASE ==================== */
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -27,12 +24,21 @@ body {
 	background-color: var(--color-claro);
 }
 
-/* ==================== HEADER ==================== */
-.cabecera {
+.header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 16px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fafcfd99;
+	backdrop-filter: blur(40px);
+	width: 100%;
+	z-index: 1;
+}
+.headerLista {
+	display: none;
 }
 .headerLogo {
 	display: inline-flex;
@@ -46,26 +52,46 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 16px;
+	list-style-type: none;
 }
 .headerAccion {
 	text-decoration-line: none;
 	color: inherit;
 	font-size: 10px;
-	text-align: center;
 	justify-content: center;
 	align-items: center;
 	display: inline-flex;
 	flex-direction: column;
 	gap: 4px;
 }
-.headerAccionIcono {
-	height: 24px;
-	aspect-ratio: 1/1;
+.headerAccion > div {
+	max-width: 24px;
+	max-height: 24px;
 	display: flex;
-	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+}
+.headerAccionIcono {
+	width: 166%;
+	height: 166%;
+}
+.headerAccionesItem:nth-child(3) {
+	display: none;
+}
+.headerAccionTexto {
+	font-size: 10px;
+	line-height: 1.4;
+	letter-spacing: -0.36px;
+	font-weight: 500;
+	text-align: center;
+}
+.headerIconos {
+	display: none;
+}
+main {
+	padding-top: 84px;
 }
 
-/* ==================== SECCIÓN HERO ==================== */
 .hero {
 	width: 100%;
 	padding-inline: 16px;
@@ -113,7 +139,7 @@ body {
 }
 .heroTitulo {
 	font-size: 40px;
-	line-height: 100%;
+	line-height: 1;
 	letter-spacing: -2px;
 	font-weight: 500;
 	text-wrap: balance;
@@ -137,8 +163,19 @@ body {
 	right: 24px;
 	bottom: 24px;
 }
+.btnReplayDescripcion {
+	display: none;
+}
+.btnReplayTexto {
+	font-size: 16px;
+	line-height: 1.1;
+	letter-spacing: -0.48px;
+	font-weight: 500;
+}
+.btnReplayIcono {
+	display: inline-flex;
+}
 
-/* ==================== BOTONES ==================== */
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -149,7 +186,6 @@ body {
 	letter-spacing: -0.48px;
 	font-weight: 500;
 }
-/* Botones de las secciones (más interlineado que los del hero) */
 .btnSeccion {
 	line-height: 1.4;
 	text-align: left;
@@ -181,7 +217,6 @@ body {
 	color: var(--color-claro);
 }
 
-/* ==================== DIV AVISO ==================== */
 .aviso {
 	padding: 32px;
 	background-color: var(--color-pistacho);
@@ -213,7 +248,6 @@ body {
 	padding-inline: 16px;
 }
 
-/* ==================== SECCIÓN CONFIANZA ==================== */
 .confianza {
 	display: flex;
 	flex-direction: column;
@@ -224,7 +258,7 @@ body {
 	padding-inline: 16px;
 	font-size: 20px;
 	line-height: 1.4;
-	letter-spacing: -0.0375rem;
+	letter-spacing: -0.6px;
 	font-weight: 500;
 	text-align: center;
 	text-wrap: balance;
@@ -237,7 +271,6 @@ body {
 	gap: 80px;
 }
 
-/* ==================== SECCIÓN FORMA DE TRABAJO ==================== */
 .formaTrabajo {
 	display: flex;
 	flex-direction: column;
@@ -259,7 +292,7 @@ body {
 	color: var(--color-negro);
 	font-size: 32px;
 	line-height: 1;
-	letter-spacing: -0.08rem;
+	letter-spacing: -1.28px;
 	font-weight: 500;
 	text-align: center;
 	text-wrap: balance;
@@ -268,13 +301,12 @@ body {
 	color: var(--color-gris);
 	font-size: 18px;
 	line-height: 1.35;
-	letter-spacing: -0.03375rem;
+	letter-spacing: -0.54px;
 	font-weight: 400;
 	text-align: center;
 	text-wrap: balance;
 }
 
-/* ==================== SECCIÓN IMPULSO VIDEO ==================== */
 .impulsoVideo {
 	padding: 32px 17px;
 	background-color: var(--color-oscuro);
@@ -285,7 +317,7 @@ body {
 .impulsoVideoTitulo {
 	font-size: 22px;
 	line-height: 1.1;
-	letter-spacing: -0.05375rem;
+	letter-spacing: -0.86px;
 	font-weight: 500;
 	text-wrap: balance;
 	text-align: center;
@@ -316,7 +348,7 @@ body {
 	gap: 20px;
 	font-size: 1rem;
 	line-height: 1.3;
-	letter-spacing: -0.03rem;
+	letter-spacing: -0.48px;
 	text-wrap: balance;
 	font-weight: 400;
 }
@@ -333,7 +365,6 @@ body {
 	color: var(--color-gris-claro);
 }
 
-/* ==================== SECCIÓN SOLUCIÓN ==================== */
 .solucion {
 	display: flex;
 	flex-direction: column;
@@ -359,12 +390,34 @@ body {
 	aspect-ratio: 16 / 9;
 	object-position: top;
 }
-.solucionVideoMediaInfo {
+.solucionVideoSello {
 	position: absolute;
-}
-.solucionVideoMediaInfoIcono {
 	margin-top: 8px;
 	margin-left: 8px;
+	width: 46.903px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.solucionVideoSelloIcono {
+	width: 100%;
+	height: auto;
+}
+.solucionVideoReproducir {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+.solucionVideoReproducirBoton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-primario);
+	border-radius: 12px;
+	width: 80px;
+	height: 45px;
 }
 .solucionVideoAutor {
 	display: flex;
@@ -394,6 +447,7 @@ body {
 	line-height: 1.1;
 	letter-spacing: -0.86px;
 	font-weight: 500;
+	text-wrap: balance;
 }
 .solucionTexto {
 	color: var(--color-gris);
@@ -434,4 +488,142 @@ body {
 }
 .solucionCardTexto {
 	color: var(--color-gris);
+}
+
+@media (min-width: 1440px) {
+	.header {
+		justify-content: inherit;
+		gap: 16px;
+	}
+	.headerLista {
+		margin-left: 52px;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		list-style-type: none;
+		gap: 12px;
+	}
+	.headerListaEnlace {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		color: var(--color-oscuro);
+		text-decoration: none;
+		padding-inline: 8px;
+	}
+	.headerListaTexto {
+		font-size: 16px;
+		line-height: 1.2;
+		letter-spacing: -0.48px;
+		font-weight: 500;
+	}
+	.headerAcciones {
+		flex: 1 1 0%;
+		justify-content: end;
+	}
+	.headerAccionesItem {
+		display: flex;
+	}
+	.headerAccionTexto {
+		font-size: 16px;
+		line-height: 1.1;
+		letter-spacing: -0.48px;
+		font-weight: 500;
+	}
+	.headerAccionesItem:nth-child(2) {
+		display: none;
+	}
+	.headerAccionesItem:nth-child(3) {
+		display: flex;
+	}
+	.headerAccionIcono {
+		display: none;
+	}
+	.headerIconos {
+		list-style-type: none;
+		display: flex;
+	}
+	.headerIconosEnlace {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+		border-radius: 8px;
+		overflow: hidden;
+		max-width: 40px;
+		max-height: 40px;
+	}
+	.headerIconosIcono {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+		object-fit: contain;
+		width: 166%;
+	}
+	.hero {
+		padding: 0 32px 56px;
+	}
+	.heroContenido {
+		padding: 40px 24px 72px;
+	}
+	.heroTextos {
+		gap: 24px;
+		text-wrap: pretty;
+		max-width: 576px;
+	}
+	.heroAnteTitulo {
+		font-size: 16px;
+		line-height: 1;
+		letter-spacing: -0.48px;
+		font-weight: 400;
+	}
+	.heroTitulo {
+		font-size: 72px;
+		line-height: 1;
+		letter-spacing: -3.6px;
+		font-weight: 500;
+		text-wrap: balance;
+	}
+	.heroTexto {
+		font-size: 18px;
+		line-height: 1.35;
+		letter-spacing: -0.54px;
+		font-weight: 400;
+	}
+	.heroBotones {
+		flex-direction: row;
+	}
+	.heroBotones .btnPrimario {
+		width: fit-content;
+	}
+	.heroReplay .btnReplayTexto {
+		display: none;
+	}
+	.heroReplay .btnReplay {
+		/* background-color: var(--color-primario); */
+		display: flex;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 24px;
+	}
+	.heroReplayBoton {
+		padding: 24px;
+	}
+	.btnReplayIconoImg {
+		padding: 8px 24px;
+		background-color: var(--color-primario);
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	.btnReplayDescripcion {
+		max-width: 150px;
+		display: flex;
+		text-align: left;
+		text-wrap: balance;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.1;
+		letter-spacing: -0.48px;
+	}
 }
