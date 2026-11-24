@@ -1,3 +1,4 @@
+/* ==================== VARIABLES ==================== */
 :root {
 	/* Colores */
 	--color-primario: #17d5ff;
@@ -5,8 +6,12 @@
 	--color-negro: #0a0e12;
 	--color-claro: #fafcfd;
 	--color-gris: #4c5864;
+	--color-gris-claro: #a9b2bc;
 	--color-blanco-translucido: #ffffff99;
+	--color-pistacho: #d6e96d;
 }
+
+/* ==================== BASE ==================== */
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -19,8 +24,11 @@ body {
 		'Segoe UI',
 		Roboto,
 		sans-serif;
+	background-color: var(--color-claro);
 }
-header {
+
+/* ==================== HEADER ==================== */
+.cabecera {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -29,7 +37,7 @@ header {
 .headerLogo {
 	display: inline-flex;
 }
-.headerLogo img {
+.headerLogoImg {
 	height: 52px;
 	width: 80px;
 }
@@ -50,12 +58,14 @@ header {
 	flex-direction: column;
 	gap: 4px;
 }
-.headerAccion img {
+.headerAccionIcono {
 	height: 24px;
 	aspect-ratio: 1/1;
 	display: flex;
 	flex-shrink: 0;
 }
+
+/* ==================== SECCIÓN HERO ==================== */
 .hero {
 	width: 100%;
 	padding-inline: 16px;
@@ -68,7 +78,7 @@ header {
 	justify-content: center;
 	align-items: center;
 }
-.heroMedia > img {
+.heroImg {
 	min-height: 552px;
 	width: 100%;
 	border-radius: 16px;
@@ -97,7 +107,7 @@ header {
 .heroAnteTitulo {
 	text-transform: uppercase;
 	font-size: 14px;
-	line-height: 100%;
+	line-height: 1;
 	letter-spacing: -0.48px;
 	font-weight: 400;
 }
@@ -110,7 +120,7 @@ header {
 }
 .heroTexto {
 	font-size: 16px;
-	line-height: 135%;
+	line-height: 1.35;
 	letter-spacing: -0.54px;
 	font-weight: 400;
 	max-width: 320px;
@@ -122,15 +132,28 @@ header {
 	align-items: center;
 	gap: 16px;
 }
+.heroReplay {
+	position: absolute;
+	right: 24px;
+	bottom: 24px;
+}
+
+/* ==================== BOTONES ==================== */
 .btn {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
 	text-decoration-line: none;
 	font-size: 16px;
-	line-height: 110%;
+	line-height: 1.1;
 	letter-spacing: -0.48px;
 	font-weight: 500;
+}
+/* Botones de las secciones (más interlineado que los del hero) */
+.btnSeccion {
+	line-height: 1.4;
+	text-align: left;
+	text-wrap: balance;
 }
 .btnPrimario {
 	padding: 12px 16px;
@@ -145,17 +168,52 @@ header {
 .btnTexto {
 	color: var(--color-claro);
 }
-.heroReplay {
-	position: absolute;
-	right: 24px;
-	bottom: 24px;
-}
 .btnReplay {
 	padding: 12px 24px;
 	border-radius: 12px;
 	background-color: var(--color-blanco-translucido);
 	color: var(--color-oscuro);
 }
+.btnOscuro {
+	padding: 12px 20px;
+	border-radius: 12px;
+	background-color: var(--color-oscuro);
+	color: var(--color-claro);
+}
+
+/* ==================== DIV AVISO ==================== */
+.aviso {
+	padding: 32px;
+	background-color: var(--color-pistacho);
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.avisoTextos {
+	display: flex;
+	flex-direction: column;
+	color: var(--color-oscuro);
+}
+.avisoEtiqueta {
+	padding-inline: 6px;
+	margin-bottom: 8px;
+	width: fit-content;
+	font-size: 12px;
+	line-height: 1.4;
+	letter-spacing: -0.36px;
+	font-weight: 500;
+}
+.avisoTexto {
+	font-size: 18px;
+	line-height: 1.35;
+	letter-spacing: -0.54px;
+	font-weight: 400;
+}
+.aviso .btn {
+	padding-inline: 16px;
+}
+
+/* ==================== SECCIÓN CONFIANZA ==================== */
 .confianza {
 	display: flex;
 	flex-direction: column;
@@ -170,6 +228,7 @@ header {
 	font-weight: 500;
 	text-align: center;
 	text-wrap: balance;
+	color: var(--color-negro);
 }
 .confianzaLogos {
 	display: flex;
@@ -177,6 +236,8 @@ header {
 	align-items: center;
 	gap: 80px;
 }
+
+/* ==================== SECCIÓN FORMA DE TRABAJO ==================== */
 .formaTrabajo {
 	display: flex;
 	flex-direction: column;
@@ -212,14 +273,154 @@ header {
 	text-align: center;
 	text-wrap: balance;
 }
-.sectImpulsoVideo {
+
+/* ==================== SECCIÓN IMPULSO VIDEO ==================== */
+.impulsoVideo {
 	padding: 32px 17px;
 	background-color: var(--color-oscuro);
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.impulsoVideoTitulo {
+	font-size: 22px;
+	line-height: 1.1;
+	letter-spacing: -0.05375rem;
+	font-weight: 500;
+	text-wrap: balance;
+	text-align: center;
 	color: var(--color-claro);
 }
-.ulSectImpVideo {
-	list-style: none;
+.impulsoVideoCards {
+	list-style-type: none;
 	display: grid;
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 	width: 100%;
+	gap: 20px;
+}
+.impulsoVideoCardEnlace {
+	text-decoration: none;
+}
+.impulsoVideoCardMedia {
+	display: flex;
+}
+.impulsoVideoCardImg {
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+.impulsoVideoCardTextos {
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-size: 1rem;
+	line-height: 1.3;
+	letter-spacing: -0.03rem;
+	text-wrap: balance;
+	font-weight: 400;
+}
+.impulsoVideoCardTitulo {
+	font-size: inherit;
+	font-weight: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 8px;
+	color: var(--color-claro);
+}
+.impulsoVideoCardTexto {
+	color: var(--color-gris-claro);
+}
+
+/* ==================== SECCIÓN SOLUCIÓN ==================== */
+.solucion {
+	display: flex;
+	flex-direction: column;
+	padding: 32px 17px;
+	gap: 40px;
+	color: var(--color-negro);
+}
+.solucionVideo {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.solucionVideoMedia {
+	display: flex;
+	aspect-ratio: 16 / 9;
+}
+.solucionVideoReproductor {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.solucionVideoAutor {
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	line-height: 1.3;
+	letter-spacing: -0.48px;
+}
+.solucionVideoNombre {
+	font-size: 18px;
+	line-height: 1.35;
+	letter-spacing: -0.54px;
+	font-weight: 500;
+}
+.solucionContenido {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.solucionTextos {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+.solucionTitulo {
+	font-size: 22px;
+	line-height: 1.1;
+	letter-spacing: -0.86px;
+	font-weight: 500;
+}
+.solucionTexto {
+	color: var(--color-gris);
+	font-size: 16px;
+	line-height: 1.3;
+	letter-spacing: -0.48px;
+}
+.solucionCards {
+	list-style-type: none;
+	display: grid;
+	gap: 40px;
+	padding-inline: 16px;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.solucionCardEnlace {
+	display: flex;
+	gap: 20px;
+	text-decoration-line: none;
+	color: inherit;
+}
+.solucionCardIcono {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+.solucionCardTextos {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 16px;
+	line-height: 1.3;
+	letter-spacing: -0.48px;
+}
+.solucionCardTitulo {
+	font-size: inherit;
+	font-weight: 500;
+	color: var(--color-oscuro);
+}
+.solucionCardTexto {
+	color: var(--color-gris);
 }
